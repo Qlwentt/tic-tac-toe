@@ -4,4 +4,40 @@
 
 .player-info ul{
 	list-style: none;
+	padding: 0px;
+
 }
+
+.player-info h2{
+	border-bottom: 3px solid black; 
+
+}
+
+.player-info {
+	/*width: 150px;
+    height: 75px;*/
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 3px solid #73AD21; 
+    display: inline-block;
+}
+
+#game-title{
+	margin-left: 25%;
+	margin-right: 25%;
+	text-align: center;
+}
+
+footer  {
+	display: inline-block;
+	float: right;
+	border: 3px solid #73AD21; 
+
+}
+
+footer #blocks {
+	display: block;
+	margin-right: ;
+}
+
+

@@ -16,8 +16,8 @@
 <body>
   <script src="js/scripts.js"></script>
   <header>
-  	<h1>Tic-Tac-Toe</h1>
-  	<section class= "player-info">
+  	<h1 id="game-title">Tic-Tac-Toe</h1>
+  	<section id= "p1" class= "player-info">
 	  	<h2>Player 1</h2>
 	  	<ul>
 	  	<script type="text/template" id="tmpl-player-info">  	
@@ -27,7 +27,7 @@
 	  	</ul>  	
 	  </section>
 
-  	<section class= "player-info">
+  	<section id = "p2" class= "player-info">
 	  	<h2>Player 2</h2>
 	  	<ul>
 	  	<script type="text/template" id="tmpl-player-info">
@@ -62,14 +62,20 @@
   </main>
   <footer>
   	<form>
+
+      <div class= "blocks">
   		<label>
               Player 1
               <input type="text" name="player1">
         </label>
+      </div>
+
+      <div class= "blocks">
   		<label>
               Player 2
               <input type="text" name="player2">
         </label>
+      </div>
 
   		<button type= "submit">New Game</button>
   		<button>Quit</button>
