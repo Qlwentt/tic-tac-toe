@@ -18,6 +18,11 @@ var Game = function(){
 
 Game.prototype ={
 	start: function(name1,name2){
+		if (name1 === undefined || name2 === undefined){
+			throw "missingArgumentsError";
+		}else if (typeof(name1) !== "string" || typeof(name1) !== "string") {
+			throw TypeError();
+		}
 		console.log("TIC-TAC-TOE");
 		this.player1.name = name1;
 		this.player2.name = name2;

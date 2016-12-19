@@ -1,0 +1,80 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Tic-Tac-Toe</title>
+  <meta name="description" content="Tic-Tac-Toe Game">
+  <meta name="author" content="Quai">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <script src="js/scripts.js"></script>
+  <header>
+  	<h1>Tic-Tac-Toe</h1>
+  	<section class= "player1-info">
+	  	<h2>Player 1</h2>
+	  	<script type="text/template" id="tmpl-player-info">
+   
+    
+	  	<ul>
+	  		<li><%- player1.name %></li>
+	  		<li><img src = <%- player1.tag + ".jpg" %> /></li>
+	  	</ul>
+
+	  	</script>  	
+	  </section>
+
+  	<section class= "player2-info">
+	  	<h2>Player 2</h2>
+	  	<script type="text/template" id="tmpl-player-info">
+   
+    
+	  	<ul>
+	  		<li><%- player2.name %></li>
+	  		<li><img src = <%- player2.tag + ".jpg" %> /></li>
+	  	</ul>
+
+	  	</script>
+  	</section>
+  </header>
+  <main>
+  	<section class = "board">
+  		<img src = "../images/empty-board.png"/>
+
+  		<script type="text/template" id="tmpl-board-cells">
+      
+    
+  		<ul>
+  			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
+  			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
+  			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
+  			
+  			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
+  			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
+  			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
+  			
+  			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
+  			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
+  			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
+  		</ul>
+
+  		</script>
+  </main>
+  <footer>
+  	<form>
+  		<input>Player 1</input>
+  		<input>Player 2<input>
+
+  		<button type= "submit">New Game</button>
+  		<button>Quit</button>
+  	</form>
+  	
+  </footer>
+
+</body>
+</html>

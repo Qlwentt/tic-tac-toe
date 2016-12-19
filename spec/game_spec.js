@@ -24,6 +24,21 @@ describe('Game', function() {
 	    });
 	});
 
+	describe('start', function() {
+	    it('players names must be present', function() {
+	       var testGame = new Game;
+	       expect(function(){testGame.start();}).toThrow("missingArgumentsError");
+	       
+	    });
+	});
+
+	describe('start', function() {
+	    it('players names must be strings', function() {
+	       var testGame = new Game;
+	       expect(function(){testGame.start(3,3);}).toThrow(TypeError());
+	       
+	    });
+	});
 
 });
 
