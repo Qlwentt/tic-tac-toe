@@ -63,15 +63,35 @@
   </header>
   <main>
   	<section class = "board">
-  		<img src = "../images/empty-board.png"/>
+  		<section id = "sample">
+        <table>
+          <tr>
+            <td><img src = "../images/x.png"/></td>
+            <td><img src = "../images/o.png"/></td>
+            <td><img src = "../images/x.png"/></td>
+          </tr>
+          <tr>
+            <td><img src = "../images/o.png"/></td>
+            <td><img src = "../images/x.png"/></td>
+            <td><img src = "../images/o.png"/></td>
+          </tr>
+          <tr>
+            <td><img src = "../images/x.png"/></td>
+            <td><img src = "../images/o.png"/></td>
+            <td><img src = "../images/x.png"/></td>
+          </tr>
+        </table>
+      </section>
+
+      <img id= "empty-board" src = "../images/empty-board.png"/>
 
   		<script type="text/template" id="tmpl-board-cells">
       
     
   		<ul>
-  			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
-  			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
-  			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
+  			<li><img src = <%- "../images/" + thisPlayer.tag + ".jpg" %> /></li>
+  			<li><img src = <%- "../images/" + thisPlayer.tag + ".jpg" %> /></li>
+  			<li><img src = <%- "../images/" + thisPlayer.tag + ".jpg" %> /></li>
   			
   			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>
   			<li><img src = <%- thisPlayer.tag + ".jpg" %> /></li>

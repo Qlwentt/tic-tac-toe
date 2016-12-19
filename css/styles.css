@@ -24,7 +24,7 @@ header{
     height: 75px;*/
  /*   margin-left: 5%;
     margin-right: 5%;*/
-    border: 3px solid #73AD21; 
+    /*border: 3px solid #73AD21; */
     display: inline-block;
 }
 
@@ -51,24 +51,25 @@ header{
 }
 
 main{
-	border: 3px solid black;
-	text-align: center;
+/*	border: 3px solid black;
+*/	text-align: center;
 	display: inline-block;
 	width: 100%; 
 }
 
 #new-game  {
+	margin: 1%;
 	display: inline-block;
-	border: 3px solid #73AD21; 
-	background-color: gray;
+/*	border: 3px solid #73AD21; 
+*/	background-color: gray;
 	padding: 2%;
 	
 
 }
 
-#new-game #blocks {
+#new-game .blocks {
 	display: block;
-	margin-right: ;
+	margin: 5% 0% 5% 0% ;
 }
 
 footer button{
@@ -82,4 +83,16 @@ footer button{
 	width: 100%;
 }
 
+table{
+	position: absolute;
+	z-index: 3;
+}
 
+table td{
+	padding: 10px 0px 0px 0px;
+}
+
+#empty-board{
+	position: relative;
+	z-index: -1;
+}
