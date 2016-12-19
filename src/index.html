@@ -2,13 +2,14 @@
 
 <html lang="en">
 <head>
+ <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
   <meta charset="utf-8">
 
   <title>Tic-Tac-Toe</title>
   <meta name="description" content="Tic-Tac-Toe Game">
   <meta name="author" content="Quai">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="../css/styles.css">
 
 </head>
 
@@ -16,30 +17,24 @@
   <script src="js/scripts.js"></script>
   <header>
   	<h1>Tic-Tac-Toe</h1>
-  	<section class= "player1-info">
+  	<section class= "player-info">
 	  	<h2>Player 1</h2>
-	  	<script type="text/template" id="tmpl-player-info">
-   
-    
 	  	<ul>
+	  	<script type="text/template" id="tmpl-player-info">  	
 	  		<li><%- player1.name %></li>
-	  		<li><img src = <%- player1.tag + ".jpg" %> /></li>
-	  	</ul>
-
-	  	</script>  	
+	  	</script>
+	  		<li><img src = "../images/x.png"/></li>
+	  	</ul>  	
 	  </section>
 
-  	<section class= "player2-info">
+  	<section class= "player-info">
 	  	<h2>Player 2</h2>
-	  	<script type="text/template" id="tmpl-player-info">
-   
-    
 	  	<ul>
-	  		<li><%- player2.name %></li>
-	  		<li><img src = <%- player2.tag + ".jpg" %> /></li>
-	  	</ul>
-
+	  	<script type="text/template" id="tmpl-player-info">
+	  		<li><%- player2.name %></li>	  	
 	  	</script>
+	  		<li><img src = "../images/o.png"/></li>
+	  	</ul>
   	</section>
   </header>
   <main>
@@ -67,8 +62,14 @@
   </main>
   <footer>
   	<form>
-  		<input>Player 1</input>
-  		<input>Player 2<input>
+  		<label>
+              Player 1
+              <input type="text" name="player1">
+        </label>
+  		<label>
+              Player 2
+              <input type="text" name="player2">
+        </label>
 
   		<button type= "submit">New Game</button>
   		<button>Quit</button>
