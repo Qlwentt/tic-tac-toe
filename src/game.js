@@ -35,28 +35,4 @@ Game.prototype ={
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default Game;
