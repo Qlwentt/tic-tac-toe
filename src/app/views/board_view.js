@@ -10,8 +10,6 @@ const BoardView = Backbone.View.extend({
     
     
     this.cells=[];
-    var test = $("#tmpl-board-cells");
-    console.log("this is template:",test.html())
     this.cellsTemplate = options.template;
     this.model=options.model;
     this.cell= this.$('.board');

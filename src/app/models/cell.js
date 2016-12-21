@@ -8,7 +8,7 @@ const Cell = Backbone.Model.extend({
 		letter: "x"
 	},
 	initialize: function (options){
-		console.log("Contact card for: "+ this.get("position"))
+		console.log("Cell # "+ this.get("position") + "created")
 	}
 });
 
