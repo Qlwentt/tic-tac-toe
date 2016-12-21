@@ -113,7 +113,7 @@ table td:hover{
 }
 
 table td{
-	border: 3px solid;
+	border: 5px solid;
 }
 
 .left-side{
@@ -137,3 +137,7 @@ table td{
 	z-index: -1;
 	display: none;
 }
+
+form{
+/*	display: none;
+*/}
