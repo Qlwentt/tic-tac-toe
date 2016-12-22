@@ -5,10 +5,11 @@ const Cell = Backbone.Model.extend({
   // a single contact: name, phone number, and email.
 	defaults: {
 		position: "1",
-		letter: "x"
+		letter: "x",
+		class: "none"
 	},
 	initialize: function (options){
-		console.log("Cell # "+ this.get("position") + "created")
+		console.log("Cell # "+ this.get("position") + " created")
 	}
 });
 

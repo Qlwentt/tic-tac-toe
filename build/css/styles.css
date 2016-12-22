@@ -89,6 +89,7 @@ table{
 	text-align: center;
 	width: 100%;
 	z-index: 3;
+	border: 1px;
 }
 
 table td{
@@ -114,6 +115,13 @@ table td:hover{
 
 table td{
 	border: 5px solid;
+
+}
+
+.hide{
+	text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .left-side{
@@ -137,6 +145,7 @@ table td{
 	z-index: -1;
 	display: none;
 }
+
 
 form{
 /*	display: none;
