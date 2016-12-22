@@ -9,7 +9,7 @@ const BoardView = Backbone.View.extend({
   initialize: function(options) {
     
     
-    this.cells=[];
+    this.moves=[];
     this.boardTemplate = options.template;
     this.model=options.model;
     // this.cell= this.$('.board');
@@ -70,8 +70,26 @@ const BoardView = Backbone.View.extend({
 
   makeMove: function(event){
     var id = $(event.currentTarget).data("id");
+    var oppositeLetter={
+      "x": "o",
+      "o": "x"
+    }
     console.log("I made a move on square", id);
-    this.model.at(id-1).set({letter: "x"})
+    var thisCell = this.model.at(id-1)
+    console.log(thisCell)
+    var thisLetter = thisCell.get("letter")
+    var last = this.moves[this.moves.length-1]
+    var movesLength = this.moves.length
+    console.log(this.moves.length)
+
+    if (thisLetter === "_" && this.moves.length === 0){
+      console.log("letter:",thisLetter)
+      thisCell.set({letter: "x"})
+      this.moves.push("x")
+    }else if(thisLetter === "_" && !(this.moves.length === 0)){
+      thisCell.set({letter: oppositeLetter[last]})
+      this.moves.push(oppositeLetter[last])
+    }
     this.render()
   }
   // setCell: function(cell){
