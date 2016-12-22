@@ -28,15 +28,18 @@ const BoardView = Backbone.View.extend({
     
     // this.cell.empty();
     this.delegateEvents();
-    console.log("board:", this.model.toJSON());
+    // console.log("board:", this.model.toJSON());
+    console.log(this.model.at(0).get("class"))
     var html = this.boardTemplate({board: this.model.toJSON()});
     // var self = this
     this.$el.html(html);
-
-    // for (var i = 0; this.model.length - 1; i++) {
-    //  $(self.el).addClass(self.model.at(i).class);
-    // };
-    
+  
+    for (var i = 0; i< this.model.length; i++) {
+      var itsClass = "."+ (i+1).toString()
+      console.log("class:", this.model.at(i).get("class"));
+      $(itsClass).attr("class", this.model.at(i).get("class"));
+    };
+    // this.model.get("class"
 
     //   this.delegateEvents();
 
