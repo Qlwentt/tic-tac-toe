@@ -34,10 +34,15 @@ const BoardView = Backbone.View.extend({
     // var self = this
     this.$el.html(html);
   
+    //set the css classes so it can look like a tic tac toe board
     for (var i = 0; i< this.model.length; i++) {
-      var itsClass = "."+ (i+1).toString()
+      var itsClass = (i+1).toString()
       console.log("class:", this.model.at(i).get("class"));
-      $(itsClass).attr("class", this.model.at(i).get("class"));
+
+      //set a data id attribute to keep track of click events
+      $("."+itsClass).attr("data-id", (i+1).toString());
+      $("."+itsClass).attr("class", this.model.at(i).get("class") + " hide " + itsClass);
+
     };
     // this.model.get("class"
 
@@ -57,6 +62,17 @@ const BoardView = Backbone.View.extend({
     // }, this);
     // console.log("matrix",this.cells)
     return this;
+  },
+
+  events:{
+      "click td": "makeMove"
+  },
+
+  makeMove: function(event){
+    var id = $(event.currentTarget).data("id");
+    console.log("I made a move on square", id);
+
+    
   }
   // setCell: function(cell){
   //     var cellView = new CellView({
