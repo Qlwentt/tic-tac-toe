@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 	  		var cell = new Cell({
 	  			position: (i+1).toString(),
-	  			letter: "x",
+	  			letter: "_",
 	  			class: cell_class.join(" ")
 	  		})
 

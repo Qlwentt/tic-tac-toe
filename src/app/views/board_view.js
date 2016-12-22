@@ -41,7 +41,7 @@ const BoardView = Backbone.View.extend({
 
       //set a data id attribute to keep track of click events
       $("."+itsClass).attr("data-id", (i+1).toString());
-      $("."+itsClass).attr("class", this.model.at(i).get("class") + " hide " + itsClass);
+      $("."+itsClass).attr("class", this.model.at(i).get("class") + " " + itsClass);
 
     };
     // this.model.get("class"
@@ -71,8 +71,8 @@ const BoardView = Backbone.View.extend({
   makeMove: function(event){
     var id = $(event.currentTarget).data("id");
     console.log("I made a move on square", id);
-
-    
+    this.model.at(id-1).set({letter: "x"})
+    this.render()
   }
   // setCell: function(cell){
   //     var cellView = new CellView({
