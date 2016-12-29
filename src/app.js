@@ -12,10 +12,6 @@ import GameView from "app/views/game_view";
 // const Other =  require('./game.js').default;
 // const game = new Other();
 
-const gameView = new GameView({
-  el: $("#test")
-});
-
 $(document).ready(function() {
 	
 
@@ -69,4 +65,10 @@ $(document).ready(function() {
 		el: $(".board")
 	});
 	boardView.render();
+
+	const gameView = new GameView({
+  		el: $("#test"),
+  		myBoardView: boardView
+	});
+	gameView.render();
 });

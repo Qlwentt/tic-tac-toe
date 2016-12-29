@@ -80,8 +80,7 @@ const BoardView = Backbone.View.extend({
   },
 
   events:{
-      "click td": "makeMove",
-      "click #new-game": "clear"
+      "click td": "makeMove"
   },
 
   makeMove: function(event){
@@ -110,6 +109,8 @@ const BoardView = Backbone.View.extend({
       this.moves.push(oppositeLetter[last]);
     }
     this.render();
+    this.delegateEvents();
+
     var check=this.checkWin();
     if (check ===true){
       $("#winner").html("There was a tie.")
@@ -162,7 +163,8 @@ const BoardView = Backbone.View.extend({
     }
   },
   clear: function(){
-    console.log("I pushed it")
+    this.delegateEvents();
+    console.log("I pushed it");
     this.boardArray = [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]];
     this.moves = [];
     

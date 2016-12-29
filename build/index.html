@@ -45,47 +45,50 @@
               <input type="text" name="player2">
         </label>
       </div>
-
       <button type= "submit">Play</button>
     </form> 
 
-  <h1 id="winner">You Win</h1>
+  <h1 id="winner"></h1>
   </section>
 
 
-  	<section id = "p2" class= "player-info">
+  	<section id= "p2" class= "player-info">
 	  	<h2>Player 2</h2>
 	  	<ul>
 	  	<script type="text/template" id="tmpl-player-info">
 	  		<li><%- player2.name %></li>	  	
 	  	</script>
-	  		<li><img src = "../images/o.png"/></li>
+	  		<li><img src= "../images/o.png"/></li>
 	  	</ul>
   	</section>
   </div>
   </header>
   <main>
-  	<section class = "board">
+  	<section class= "board nope">
+        <!-- this is what the template is supposed to produce --> 
         <!-- <table>
           <tr>
-            <td class = "left-side top hide" id= "1">x</td>
-            <td class = "middle top hide" id= "2" >x</td>
-            <td class = "right-side top hide" id="3">x</td>
+            <td class = "left-side top" id= "1">x (for example)</td>
+            <td class = "middle top" id= "2" >x</td>
+            <td class = "right-side top " id="3">x</td>
           </tr>
           <tr>
-            <td class = "left-side hide" id="4">x</td>
-            <td class = "middle hide" id="5">x</td>
-            <td class = "right-side hide" id="6">x</td>
+            <td class = "left-side" id="4">x</td>
+            <td class = "middle" id="5">x</td>
+            <td class = "right-side" id="6">x</td>
           </tr>
           <tr>
-            <td class = "left-side bottom hide" id="7">x</td>
-            <td class = "middle bottom hide" id="8">x</td>
-            <td class = "right-side bottom hide" id="9">x</td>
+            <td class = "left-side bottom" id="7">x</td>
+            <td class = "middle bottom" id="8">x</td>
+            <td class = "right-side bottom" id="9">x</td>
           </tr>
         </table> -->
       
-       <!--  I know this is hacky but I don't know what to do -->
-  		 <script type="text/template" id="tmpl-board-cells">
+
+  		 <!-- this grabs the board collection and loops through it -->
+       <!-- starts a new row at 0, 3, and 6 indices -->
+       <!-- sets class to be the position for cell and letter to be letter for cell -->
+       <script type="text/template" id="tmpl-board-cells">
 	  		<table>
 	          	<% for (var i=0; i<board.length; i++){ %>
 	          		<% if (i===0 || i%3 === 0){ %>
@@ -103,7 +106,7 @@
   </main>
   <footer>
     <div id="buttons">
-      <button id= "new-game">New Game</button>
+      <button id= "new-game-button">New Game</button>
     </div>
   </footer>
 </body>
